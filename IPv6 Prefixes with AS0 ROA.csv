@@ -1,0 +1,362 @@
+AS, Prefix, Max Length, Announced/Not Announced, Organization, RIR
+0,2a0f:3787::/32,32,No,AS13020-rC3-32-FRA,ripe
+0,2001:7fa:0:3::/64,128,No,ORG-NCC1-RIPE,ripe
+0,2001:502:cbe4::/48,48,No,VeriSign Global Registry Services,arin
+0,2a09:9280::/29,29,No,ORG-GSS24-RIPE,ripe
+0,2001:504:61::/48,48,No,DE-CIX North America Inc.,arin
+0,2001:df5:7880::/48,48,No,ORG-DSPL11-AP,apnic
+0,2001:df6:480::/48,48,No,ORG-DAPL7-AP,apnic
+0,2001:ddb::/48,48,Yes,ORG-RIEN2-AP,apnic
+0,2620:74:11::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2001:df0:203::/48,48,No,IPv6-INDONETWORK-ID,apnic
+0,2001:df0:2700::/48,48,No,IDNIC-BPRTIK-ID,apnic
+0,2001:df0:7b00::/48,48,No,IDNIC-CLICK-ID,apnic
+0,2001:df0:9100::/48,48,No,IDNIC-GARANSINDOINTERGLOBAL-ID,apnic
+0,2001:df0:ba80::/48,48,No,IDNIC-DRAGON-ID,apnic
+0,2001:df0:f800::/48,48,Yes,IPv6-INFINYS-ID,apnic
+0,2001:df1:5100::/48,48,No,IDNIC-UBER-ID,apnic
+0,2001:df1:9300::/48,48,No,IDNIC-OTHMARNETWORK-ID,apnic
+0,2001:df1:9480::/48,48,No,IDNIC-CLARA-ID,apnic
+0,2001:df1:9a80::/48,48,No,IDNIC-ID,apnic
+0,2001:df1:ab80::/48,48,No,IDNIC-ATS-ID,apnic
+0,2001:df2:e80::/48,48,No,IDNIC-LAS-ID,apnic
+0,2001:df2:6a00::/48,48,No,IDNIC-AHLOO-ID,apnic
+0,2001:df2:b200::/48,48,No,IDNIC-ICONMEDIANETWORK-ID,apnic
+0,2001:df3:2300::/48,48,No,IDNIC-DENSUS-88-ID,apnic
+0,2001:df3:4380::/48,48,No,IDNIC-JENID-ID,apnic
+0,2001:df3:9d00::/48,48,No,IDNIC-JATIM-ID,apnic
+0,2001:df3:dc00::/48,48,No,IDNIC-IBOLZ-ID,apnic
+0,2001:df4:e500::/48,48,No,IDNIC-TRIMASINDO-ID,apnic
+0,2001:df5:e500::/48,48,No,IDNIC-FINTAX-ID,apnic
+0,2001:df6:3200::/48,48,No,IDNIC-ANZ-ID,apnic
+0,2001:df6:5f00::/48,48,No,IDNIC-ID,apnic
+0,2001:df7:3f00::/48,48,No,IDNIC-EAGLEYE-ID,apnic
+0,2001:df7:6900::/48,48,No,IDNIC-SWIFECT-ID,apnic
+0,2001:df7:a600::/48,48,No,IDNIC-JAMUZU-ID,apnic
+0,2001:df7:b900::/48,48,No,IDNIC-SUFIATV-ID,apnic
+0,2400:5040::/32,48,No,BINTANGKOMINDO-ID,apnic
+0,2400:8ec0::/32,48,No,RADITA-ID,apnic
+0,2401:a300::/32,48,No,AUDIANET-IDNIC-ID-20110803,apnic
+0,2401:c940::/32,48,No,PTHCM-ID,apnic
+0,2402:480::/32,48,No,BINATELCO-ID,apnic
+0,2402:3d80::/32,48,No,SUMATERANET-ID,apnic
+0,2402:8ac0::/32,48,No,ISP-ID,apnic
+0,2402:9d40::/32,48,No,GOSTNET-ID,apnic
+0,2403:1780::/32,48,No,TOPAS-ID,apnic
+0,2403:69c0::/32,48,No,NEXUS-ID,apnic
+0,2403:7b80::/32,48,No,MERINDO-ID,apnic
+0,2404:3580::/32,48,No,CAKRAWALA-ID,apnic
+0,2404:7880::/32,48,No,PRONET-ID,apnic
+0,2404:8f40::/32,48,No,INTECHMANDIRI-ID,apnic
+0,2404:a6c0::/32,48,No,DASAWARSANET-ID,apnic
+0,2405:2dc0::/32,48,No,UTARAMEDIANET-ID,apnic
+0,2405:3fc0::/32,48,No,PELANGISURYAPERSADA-ID,apnic
+0,2405:5840::/32,48,No,LINTASKARSA-ID,apnic
+0,2405:9040::/32,48,No,INMEET-ID,apnic
+0,2405:9440::/32,48,No,BARNET-ID,apnic
+0,2405:9dc0::/32,48,No,KUANTUM-ID,apnic
+0,2405:aa40::/32,48,No,STSNET-ID,apnic
+0,2405:ab40::/32,48,No,SACT-ID,apnic
+0,2405:de40::/32,48,No,INTERNET-ID,apnic
+0,2406:5540::/32,48,No,MIT-ID,apnic
+0,2406:9880::/32,48,No,JNK-ID,apnic
+0,2001:500:30ff::/48,48,No,VeriSign Global Registry Services,arin
+0,2620:74:e0::/45,45,No,VeriSign Infrastructure & Operations,arin
+0,2001:df6:1a80::/48,48,No,ORG-UNN1-AP,apnic
+0,2a0c:3800::/32,32,No,ORG-JB83-RIPE,ripe
+0,2001:43f8:6d0::/46,46,No,ORG-NA23-AFRINIC,afrinic
+0,2a04:b906::/48,48,Yes,ORG-SNL33-RIPE,ripe
+0,2001:7f8:c::/48,128,No,ORG-IEA3-RIPE,ripe
+0,2001:df3:1300::/48,48,No,ORG-OCL5-AP,apnic
+0,2a00:8860::/29,29,No,ORG-PNL7-RIPE,ripe
+0,2a00:8861::/32,32,No,ORG-PNL7-RIPE,ripe
+0,2001:dea:0:10::/64,64,No,ORG-MPL6-AP,apnic
+0,2001:dea:0:20::/64,64,No,ORG-MPL6-AP,apnic
+0,2001:dea:0:30::/64,64,No,ORG-MPL6-AP,apnic
+0,2001:dea:0:40::/64,64,No,ORG-MPL6-AP,apnic
+0,2001:dea:0:50::/64,64,No,ORG-MPL6-AP,apnic
+0,2001:43f8:1680::/48,48,No,ORG-LIEP2-AFRINIC,afrinic
+0,2001:7f8:42::/48,128,No,ORG-PDSz1-RIPE,ripe
+0,2001:504:118::/48,48,No,COLLECTIVITE DE SAINT BARTHELEMY,arin
+0,2001:500:12c::/46,46,No,VeriSign Global Registry Services,arin
+0,2602:fd10:700::/40,48,No,3SR LLC,arin
+0,2001:7fa:0:1::/64,64,No,ORG-NCC1-RIPE,ripe
+0,2a04:b907::/48,48,Yes,ORG-SNL33-RIPE,ripe
+0,2a0e:bf00::/29,48,No,ORG-JS165-RIPE,ripe
+0,2620:74:b0::/44,44,No,VeriSign Infrastructure & Operations,arin
+0,2001:504:36::/48,48,No,DE-CIX North America Inc.,arin
+0,2001:deb:c000::/48,48,No,ORG-DCMS1-AP,apnic
+0,2606:a980:0:5::/64,64,No,Megaport (USA) Inc.,arin
+0,2602:fd10:a00::/40,48,No,3SR LLC,arin
+0,2001:7f8:105::/48,48,No,ORG-EML9-RIPE,ripe
+0,2001:de9:4000::/48,48,No,ORG-UOGO1-AP,apnic
+0,2620:74:2e::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2607:fe80::/32,64,No,CWIE  LLC,arin
+0,2001:504:30::/48,48,No,San Francisco Metropolitan Internet Exchange (SFMIX),arin
+0,2001:504:1a::/48,48,No,Toronto Internet Exchange Community,arin
+0,2403:4ac0::/48,48,No,ORG-ODSB1-AP,apnic
+0,2403:4ac0:1::/48,48,No,ORG-ODSB1-AP,apnic
+0,2403:4ac0:2::/48,48,No,ORG-ODSB1-AP,apnic
+0,2001:7f8:19::/48,48,No,ORG-BMG5-RIPE,ripe
+0,2620:74:ef::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2a02:2370:fe::/47,48,No,ORG-AT1-RIPE,ripe
+0,2a0b:35c0::/29,31,No,ORG-AT1-RIPE,ripe
+0,2620:74:f0::/44,44,No,VeriSign Infrastructure & Operations,arin
+0,2620:74:8c::/46,46,No,VeriSign Infrastructure & Operations,arin
+0,2a01:b960::/32,32,No,ORG-PNEB1-RIPE,ripe
+0,2001:43f8:310::/48,48,No,ORG-ZIE1-AFRINIC,afrinic
+0,2001:7f8:a5::/48,48,No,ORG-INBE3-RIPE,ripe
+0,2605:4280::/32,32,Yes,SECURED SERVERS LLC,arin
+0,2001:7f8:83::/48,48,No,ORG-EB17-RIPE,ripe
+0,2001:500:7967::/48,48,No,VeriSign Global Registry Services,arin
+0,2001:7f8:9f::/64,64,No,ORG-ME80-RIPE,ripe
+0,2001:df6:780::/48,48,Yes,ORG-ISAL1-AP,apnic
+0,2001:7fa:7::/48,128,No,ORG-NCC1-RIPE,ripe
+0,2001:500:13c::/47,47,No,VeriSign Global Registry Services,arin
+0,2001:7f8:c0::/48,48,No,ORG-EIS38-RIPE,ripe
+0,2620:74:12::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2001:504:3f::/48,48,No,Tahoe Internet Exchange (TahoeIX),arin
+0,2001:7f8:b6::/64,64,No,ORG-AI170-RIPE,ripe
+0,2001:7f8:43::/48,128,No,ORG-IEES1-RIPE,ripe
+0,2001:504:26::/48,64,No,Manitoba Internet Exchange Inc,arin
+0,2001:504:26::/64,64,No,Manitoba Internet Exchange Inc,arin
+0,2a10:eec0:80::/41,41,No,,ripe
+0,2a10:eec0:40::/42,42,No,,ripe
+0,2a10:eec0:400::/38,38,No,,ripe
+0,2a10:eec0:2000::/35,35,No,,ripe
+0,2a10:eec0:1000::/36,36,No,,ripe
+0,2a10:eec0:8000::/33,33,No,,ripe
+0,2a10:eec0:4000::/34,34,No,,ripe
+0,2a10:eec0:200::/39,39,No,,ripe
+0,2a10:eec0:100::/40,40,No,,ripe
+0,2a10:eec0:800::/37,37,No,,ripe
+0,2a10:eec0:e::/47,47,No,,ripe
+0,2a10:eec0:20::/43,43,No,,ripe
+0,2a10:eec0:d::/48,48,No,,ripe
+0,2a10:eec0:10::/44,44,No,,ripe
+0,2620:74:b::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2001:501:8a29::/48,48,No,VeriSign Global Registry Services,arin
+0,2620:74:98::/45,45,No,VeriSign Infrastructure & Operations,arin
+0,2001:7f8:17::/64,64,No,ORG-LL117-RIPE,ripe
+0,2602:fd10:600::/40,48,No,3SR LLC,arin
+0,2001:43f8:270::/48,48,No,ORG-MIXP1-AFRINIC,afrinic
+0,2001:500:130::/47,47,No,VeriSign Global Registry Services,arin
+0,2001:ded::/64,64,No,ORG-MSPL5-AP,apnic
+0,2a10:7080::/29,29,No,,ripe
+0,2001:7f8:9d::/48,128,No,ORG-IE35-RIPE,ripe
+0,2602:fd10:200::/40,48,No,3SR LLC,arin
+0,2a0c:9a44:cf::/48,48,No,ORG-TL579-RIPE,ripe
+0,2001:7f8:bd::/48,48,No,ORG-IG20-RIPE,ripe
+0,2605:fb80::/32,32,Yes,Garrison Network Solutions LLC,arin
+0,2605:fb80:e000::/36,36,Yes,IonSwitch  LLC,arin
+0,2001:7f8:c6::/48,48,No,ORG-IDH1-RIPE,ripe
+0,2001:7f8:de::/48,48,No,ORG-IDH1-RIPE,ripe
+0,2001:7f8:13::/48,48,No,ORG-NLIX1-RIPE,ripe
+0,2001:7f8:8:10::/64,64,No,ORG-PG65-RIPE,ripe
+0,2001:7f8:8:5::/64,64,No,ORG-PG65-RIPE,ripe
+0,2001:7f8:8::/64,64,No,ORG-PG65-RIPE,ripe
+0,2001:7f8:2c:1000::/64,64,No,ORG-CaWT1-RIPE,ripe
+0,2001:7f8:8:20::/64,64,No,ORG-PG65-RIPE,ripe
+0,2001:7f8:fd::/48,48,No,ORG-SI241-RIPE,ripe
+0,2001:500:13e::/48,48,No,VeriSign Global Registry Services,arin
+0,2620:74:26::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2606:a980:0:3::/64,64,No,Megaport (USA) Inc.,arin
+0,2607:3000::/32,64,No,PhoenixNAP LLC,arin
+0,2620:74:ae::/47,47,No,VeriSign Infrastructure & Operations,arin
+0,2001:df0:5580::/48,48,No,ORG-AS10-AP,apnic
+0,2001:df0:5580:400::/54,54,No,ORG-AS10-AP,apnic
+0,2001:df0:5580:c00::/54,54,No,ORG-AS10-AP,apnic
+0,2001:504:44::/48,48,No,DE-CIX North America Inc.,arin
+0,2001:504:90::/48,48,No,Philadelphia Internet Exchange,arin
+0,2606:a980:0:7::/64,64,No,Megaport (USA) Inc.,arin
+0,2001:7f8:10a::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:9e::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:32::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:106::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:44::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:3f::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:d5::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:73::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:3d::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:a0::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2001:7f8:36::/48,48,No,ORG-DtGI1-RIPE,ripe
+0,2620:74:c::/47,47,No,VeriSign Infrastructure & Operations,arin
+0,2606:a980:0:9::/64,64,No,Megaport (USA) Inc.,arin
+0,2001:7f8:c3::/48,48,No,ORG-EL299-RIPE,ripe
+0,2602:fd10:f00::/40,48,No,3SR LLC,arin
+0,2001:7f8:af::/48,128,No,ORG-AO2-RIPE,ripe
+0,2001:7fa:11::/48,48,No,ORG-NCC1-RIPE,ripe
+0,2620:74:e8::/46,46,No,VeriSign Infrastructure & Operations,arin
+0,2606:4700:7000::/48,48,Yes,Cloudflare  Inc.,arin
+0,2620:74:1a::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2620:0:5050::/48,48,No,VeriSign Global Registry Services,arin
+0,2a0d:3dc0::/30,128,No,DNET-PTP-6,ripe
+0,2a0d:3dc4::/30,128,No,ORG-AAC10-RIPE,ripe
+0,2001:500:132::/48,48,No,VeriSign Global Registry Services,arin
+0,2605:f440:56f0::/44,64,No,Keaton Alexander Guger Lair,arin
+0,2001:def:8000::/48,48,No,ORG-IEN1-AP,apnic
+0,2001:67c:24f0::/48,48,No,ORG-WAPI1-RIPE,ripe
+0,2001:7f8:c1::/48,48,No,ORG-ESA108-RIPE,ripe
+0,2001:780::/29,29,No,NORIS-BACKBONE-V6-NET,ripe
+0,2a12:4946:1222::/48,48,No,,ripe
+0,2620:74:4e::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2a04:5780::/29,29,No,ORG-AA221-RIPE,ripe
+0,2001:7f8:20:201::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:401::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:1101::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:601::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:801::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:101::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:301::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:501::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:701::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:901::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:7f8:20:202::/64,128,No,ORG-JCE1-RIPE,ripe
+0,2001:504:102::/48,48,No,DE-CIX North America Inc.,arin
+0,2001:7f8:bc::/48,48,No,ORG-IA69-RIPE,ripe
+0,2001:7f8:be::/48,48,No,ORG-IA69-RIPE,ripe
+0,2001:7f8:10::/64,64,No,ORG-NC29-RIPE,ripe
+0,2001:500:136::/47,47,No,VeriSign Global Registry Services,arin
+0,2001:504:37::/48,48,No,Atlantic IXPs Inc.,arin
+0,2a02:5320::/32,32,No,ORG-PNL10-RIPE,ripe
+0,2001:67c:794::/48,48,No,ORG-UNB2-RIPE,ripe
+0,2602:fd10:900::/40,48,No,3SR LLC,arin
+0,2001:503:cc2c::/48,48,No,VeriSign Global Registry Services,arin
+0,2a09:e180::/29,29,No,ORG-RS309-RIPE,ripe
+0,2001:504:40:108::/64,64,No,FL-IX INC,arin
+0,2001:504:40:12::/64,64,No,FL-IX INC,arin
+0,2620:74:93::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2001:678:d44:300::/64,64,No,ORG-DASH1-RIPE,ripe
+0,2001:678:d44:200::/64,64,No,ORG-DASH1-RIPE,ripe
+0,2001:678:d44::/64,64,No,ORG-DASH1-RIPE,ripe
+0,2001:7f8:f5::/48,48,No,ORG-LHS2-RIPE,ripe
+0,2607:ff00::/32,32,No,SECURED SERVERS LLC,arin
+0,2606:6c00:200::/40,40,No,Akamai Technologies  Inc.,arin
+0,2001:df0:1d00::/48,48,No,ORG-MNPL1-AP,apnic
+0,2001:7f8:81::/48,48,No,ORG-AA1142-RIPE,ripe
+0,2602:fd10:300::/40,48,No,3SR LLC,arin
+0,2001:7f8:66::/48,48,No,ORG-VRI2-RIPE,ripe
+0,2001:7f8:bf::/48,48,No,ORG-CV23-RIPE,ripe
+0,2a06:7380::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a0a:db80::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a0b:6500::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a07:4980::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a07:ec40::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a06:7d00::/29,29,No,ORG-RDSI2-RIPE,ripe
+0,2a06:1e80::/29,48,No,ORG-ISSA10-RIPE,ripe
+0,2a10:f0c0::/29,128,No,,ripe
+0,2001:67c:29f0::/48,48,No,ORG-NCL35-RIPE,ripe
+0,2602:fd10:100::/40,48,No,3SR LLC,arin
+0,2001:7f8:86::/48,48,No,ORG-AIEB2-RIPE,ripe
+0,2001:504:2d::/48,64,No,Montreal Internet Exchange Inc.,arin
+0,2001:7f8:c7::/48,48,No,ORG-EDCS2-RIPE,ripe
+0,2001:43f8:1f0::/47,47,No,ORG-IS32-AFRINIC,afrinic
+0,2001:43f8:1f2::/48,48,No,ORG-IS32-AFRINIC,afrinic
+0,2602:fd10:c00::/40,48,No,3SR LLC,arin
+0,2620:74:18::/47,47,No,VeriSign Infrastructure & Operations,arin
+0,2620:74:48::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2001:7f8:15::/48,128,No,ORG-EEA1-RIPE,ripe
+0,2a04:80c0::/29,128,No,EE-ESTPAK,ripe
+0,2620:74:1d::/48,48,No,VeriSign Infrastructure & Operations,arin
+0,2606:a980:0:4::/64,64,No,Megaport (USA) Inc.,arin
+0,2001:504:16::/63,64,No,Seattle Internet Exchange,arin
+0,2001:504:116::/48,48,No,DE-CIX North America Inc.,arin
+0,2001:504:91::/48,48,No,Fremont Cabal Internet Exchange,arin
+0,2001:500:138::/46,46,No,VeriSign Global Registry Services,arin
+0,2001:de8:4::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:5::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:5:1::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:6::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:6:1::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:6:2::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:7::/64,64,No,ORG-EAPP1-AP,apnic
+0,2001:de8:7:1::/64,64,No,ORG-EAPP1-AP,apnic
+0,2620:74:c0::/43,43,No,VeriSign Infrastructure & Operations,arin
+0,2620:74:94::/46,46,No,VeriSign Infrastructure & Operations,arin
+0,2001:7f8:cd::/48,48,No,ORG-OPB1-RIPE,ripe
+0,2001:7f8:61::/48,48,No,ORG-OPB1-RIPE,ripe
+0,2602:fd10:500::/40,48,No,3SR LLC,arin
+0,2001:7f8:56::/48,128,No,ORG-ISe3-RIPE,ripe
+0,2a0f:607:1070::/48,48,No,ORG-LIE5-RIPE,ripe
+0,2602:fd10:d00::/40,48,No,3SR LLC,arin
+0,2620:74:ec::/47,47,No,VeriSign Infrastructure & Operations,arin
+0,2605:fb80:ffff::/48,48,No,SYSTEMBS,arin
+0,2001:7f8:b:100::/64,64,No,ORG-MSMI1-RIPE,ripe
+0,2001:7f8:101:7::/64,64,No,ORG-MSMI1-RIPE,ripe
+0,2001:7f8:101:13::/64,64,No,ORG-MSMI1-RIPE,ripe
+0,2001:7f8:b:101::/64,64,No,ORG-MSMI1-RIPE,ripe
+0,2001:7f8:54::/48,64,No,ORG-FISS1-RIPE,ripe
+0,2001:7f8:47:47::/64,64,No,ORG-FISS1-RIPE,ripe
+0,2a02:79a0::/32,32,No,ORG-CEL15-RIPE,ripe
+0,2605:f440:7000::/36,36,No,Red Lily Internet,arin
+0,2605:f440:8000::/35,36,No,Red Lily,arin
+0,2402:79c0::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:4::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:8::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:10::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:20::/43,43,No,ORG-VI1-AP,apnic
+0,2402:79c0:40::/42,42,No,ORG-VI1-AP,apnic
+0,2402:79c0:80::/41,41,No,ORG-VI1-AP,apnic
+0,2402:79c0:10b::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:10c::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:110::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:120::/43,43,No,ORG-VI1-AP,apnic
+0,2402:79c0:140::/42,42,No,ORG-VI1-AP,apnic
+0,2402:79c0:180::/41,41,No,ORG-VI1-AP,apnic
+0,2402:79c0:200::/39,39,No,ORG-VI1-AP,apnic
+0,2402:79c0:400::/38,38,No,ORG-VI1-AP,apnic
+0,2402:79c0:800::/37,37,No,ORG-VI1-AP,apnic
+0,2402:79c0:1000::/40,40,No,ORG-VI1-AP,apnic
+0,2402:79c0:1100::/43,43,No,ORG-VI1-AP,apnic
+0,2402:79c0:1120::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:1124::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:1128::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:1130::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:1140::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:1144::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:1146::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:1148::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:114a::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:114c::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:1150::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:1158::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:1160::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:1170::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:1178::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:1179::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:117a::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:117c::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:1180::/41,41,No,ORG-VI1-AP,apnic
+0,2402:79c0:1200::/39,39,No,ORG-VI1-AP,apnic
+0,2402:79c0:1400::/38,38,No,ORG-VI1-AP,apnic
+0,2402:79c0:1800::/37,37,No,ORG-VI1-AP,apnic
+0,2402:79c0:2000::/35,35,No,ORG-VI1-AP,apnic
+0,2402:79c0:4000::/34,34,No,ORG-VI1-AP,apnic
+0,2402:79c0:8000::/34,34,No,ORG-VI1-AP,apnic
+0,2402:79c0:c000::/35,35,No,ORG-VI1-AP,apnic
+0,2402:79c0:e000::/36,36,No,ORG-VI1-AP,apnic
+0,2402:79c0:f000::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:f00c::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:f010::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:f020::/43,43,No,ORG-VI1-AP,apnic
+0,2402:79c0:f040::/42,42,No,ORG-VI1-AP,apnic
+0,2402:79c0:f080::/42,42,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0c0::/43,43,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0e0::/44,44,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0f0::/45,45,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0f8::/48,48,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0fa::/47,47,No,ORG-VI1-AP,apnic
+0,2402:79c0:f0fc::/46,46,No,ORG-VI1-AP,apnic
+0,2402:79c0:f100::/40,40,No,ORG-VI1-AP,apnic
+0,2402:79c0:f200::/39,39,No,ORG-VI1-AP,apnic
+0,2402:79c0:f400::/38,38,No,ORG-VI1-AP,apnic
+0,2402:79c0:f800::/37,37,No,ORG-VI1-AP,apnic
+0,2404:4e00:ff::/48,48,No,ORG-ATI1-AP,apnic
+0,2404:4e00:6000::/40,40,No,ORG-ATI1-AP,apnic
+0,2602:801:30ff::/48,48,No,AZSIGNSHOP LLC,arin
+0,2a0f:6040::/29,29,No,ORG-TU31-RIPE,ripe
+0,2606:a980:0:8::/64,64,No,Megaport (USA) Inc.,arin
+0,2607:6000::/28,28,Yes,PhoenixNAP LLC,arin
+0,2602:fd10:b00::/40,48,No,3SR LLC,arin
+0,2001:43f8::/48,128,No,ORG-TISP1-AFRINIC,afrinic

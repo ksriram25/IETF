@@ -1,0 +1,437 @@
+AS, Prefix, Max Length, Announced/Not Announced, Organization, RIR
+14618,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+7922,96.96.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+8987,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+21928,162.160.0.0/11,24,Yes,T-Mobile USA  Inc.,arin
+4713,180.0.0.0/10,10,Yes,OCN,apnic
+8075,20.64.0.0/10,10,Yes,Microsoft Corporation,arin
+1257,83.176.0.0/12,12,Yes,EE-TELE2-GPRS,ripe
+1257,90.128.0.0/12,12,Yes,LV-TELE2-GPRS,ripe
+8987,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+14618,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+7922,68.32.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+15557,79.80.0.0/12,12,Yes,ORG-VF1-RIPE,ripe
+15557,77.144.0.0/12,12,Yes,SFR-USER-DATA,ripe
+15557,109.0.0.0/11,11,Yes,N9UF-PRO,ripe
+15557,93.0.0.0/11,11,Yes,SFR-USER-DATA,ripe
+15557,78.112.0.0/12,12,Yes,N9UF-DYN-DSL,ripe
+15557,77.192.0.0/12,12,Yes,SFR-USER-DATA,ripe
+15557,86.64.0.0/12,12,Yes,N9UF-PRO,ripe
+14618,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+3462,36.224.0.0/12,24,Yes,HINET-NET,apnic
+14618,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+7018,172.0.0.0/12,12,Yes,AT&T Corp.,arin
+16509,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+7922,76.96.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+8075,52.224.0.0/11,11,Yes,Microsoft Corporation,arin
+8987,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+6327,70.64.0.0/12,24,Yes,Shaw Communications Inc.,arin
+14618,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+6830,89.64.0.0/12,12,Yes,UPC-PL,ripe
+14618,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+3462,1.160.0.0/12,24,Yes,HINET-NET,apnic
+16509,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+16509,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+14618,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+16509,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+8987,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+14618,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+14618,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+16509,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+11830,201.192.0.0/12,24,Yes,SAN JOSE,lacnic
+14618,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+14618,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+16509,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+5607,90.192.0.0/11,11,Yes,BSKYB-BROADBAND,ripe
+5607,94.0.0.0/12,12,Yes,BSKYB-BROADBAND,ripe
+14618,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+16509,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+14618,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+9105,79.64.0.0/12,24,Yes,ORG-OTIS1-RIPE,ripe
+3462,114.32.0.0/12,24,Yes,HINET-NET,apnic
+8987,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+4804,49.176.0.0/12,12,Yes,ORG-OIPL5-AP,apnic
+8987,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+1103,145.144.0.0/12,12,Yes,ORG-Sb3-RIPE,ripe
+8075,4.192.0.0/12,12,Yes,Microsoft Corporation,arin
+16509,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+16509,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+15169,34.96.0.0/12,12,Yes,Google LLC,arin
+19905,105.48.0.0/12,24,Yes,SFC-2014-2G-3G-4G,afrinic
+14618,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+4713,114.160.0.0/11,11,Yes,KITAMI,apnic
+14618,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+16509,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+14618,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8075,52.160.0.0/11,11,Yes,Microsoft Corporation,arin
+8075,20.48.0.0/12,12,Yes,Microsoft Corporation,arin
+134963,8.208.0.0/12,15,Yes,Asia Pacific Network Information Centre,arin
+16509,34.208.0.0/12,12,Yes,Amazon Technologies Inc.,arin
+45899,14.160.0.0/11,24,Yes,VNPT-VN,apnic
+45899,14.240.0.0/12,24,Yes,VNPT-VN,apnic
+45899,113.160.0.0/11,24,Yes,VNPT-VN,apnic
+8987,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+3215,2.0.0.0/12,17,Yes,ORG-FT2-RIPE,ripe
+16509,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+7922,96.192.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+7922,71.224.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+16509,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+13285,92.0.0.0/11,24,Yes,CPWBBSERV-NET,ripe
+1101,145.192.0.0/12,12,Yes,ORG-Sb3-RIPE,ripe
+16509,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+0,80.128.0.0/11,11,Yes,ORG-DTAG1-RIPE,ripe
+17676,60.64.0.0/10,10,Yes,ORG-SC4-AP,apnic
+17676,60.128.0.0/11,11,Yes,ORG-SC4-AP,apnic
+17676,60.128.0.0/12,12,No,ORG-SC4-AP,apnic
+17676,126.0.0.0/9,24,Yes,ORG-SC4-AP,apnic
+17676,126.160.0.0/11,24,Yes,ORG-SC4-AP,apnic
+17676,126.192.0.0/11,24,Yes,ORG-SC4-AP,apnic
+17676,126.224.0.0/12,24,Yes,ORG-SC4-AP,apnic
+17676,218.112.0.0/12,24,Yes,ORG-SC4-AP,apnic
+17676,218.128.0.0/12,12,Yes,ORG-SC4-AP,apnic
+17676,219.0.0.0/10,10,Yes,ORG-SC4-AP,apnic
+17676,219.0.0.0/11,11,No,ORG-SC4-AP,apnic
+17676,219.0.0.0/12,12,No,ORG-SC4-AP,apnic
+17676,219.176.0.0/12,12,Yes,ORG-SC4-AP,apnic
+17676,219.192.0.0/12,12,Yes,ORG-SC4-AP,apnic
+17676,220.0.0.0/10,10,Yes,ORG-SC4-AP,apnic
+17676,220.0.0.0/11,11,No,ORG-SC4-AP,apnic
+17676,220.0.0.0/12,12,No,ORG-SC4-AP,apnic
+17676,221.16.0.0/12,12,Yes,ORG-SC4-AP,apnic
+17676,221.32.0.0/11,11,Yes,ORG-SC4-AP,apnic
+17676,221.32.0.0/12,12,No,ORG-SC4-AP,apnic
+17676,221.64.0.0/11,11,Yes,ORG-SC4-AP,apnic
+17676,221.64.0.0/12,12,No,ORG-SC4-AP,apnic
+14618,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+14618,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+7922,67.160.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+16509,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+8987,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+8987,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+8987,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+7922,98.192.0.0/10,10,Yes,Comcast Cable Communications  LLC,arin
+51207,37.160.0.0/12,17,Yes,MOBILE-USERS-BLOCK,ripe
+15169,34.64.0.0/11,11,Yes,Google Asia Pacific Pte. Ltd.,arin
+10796,74.128.0.0/12,12,Yes,Charter Communications Inc,arin
+16509,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+38895,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+45102,43.0.0.0/9,15,No,,apnic
+4713,114.144.0.0/12,12,Yes,OCN,apnic
+8987,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+36925,196.112.0.0/12,24,Yes,Mobile_Costumers,afrinic
+16509,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+16509,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+14618,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+1659,140.112.0.0/12,12,Yes,Asia Pacific Network Information Centre,arin
+16509,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+12322,91.160.0.0/12,12,Yes,TIF-DSL-20060817,ripe
+8987,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+812,99.224.0.0/11,24,Yes,Rogers Communications Canada Inc.,arin
+14618,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+8987,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+22773,68.96.0.0/12,12,Yes,Cox Communications Inc.,arin
+16509,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+14618,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+51964,57.208.0.0/12,24,No,ORG-ENSI1-RIPE,ripe
+8987,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+14618,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+31399,53.0.0.0/8,8,Yes,ORG-DA474-RIPE,ripe
+7922,71.192.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+17557,39.32.0.0/11,15,Yes,ORG-PTCL1-AP,apnic
+17557,182.176.0.0/12,15,Yes,ORG-PTCL1-AP,apnic
+8987,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+14618,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+37100,105.16.0.0/12,24,Yes,SEACOM-ASSIGNMENTS-NETWORK,afrinic
+14618,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+16509,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+6253,48.0.0.0/8,24,No,The Prudential Insurance Company of America,arin
+8987,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+21928,100.128.0.0/9,24,Yes,T-Mobile USA  Inc.,arin
+16509,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+8075,20.160.0.0/12,12,Yes,Microsoft Corporation,arin
+37963,43.0.0.0/9,15,No,,apnic
+7922,74.16.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+8987,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8075,4.224.0.0/12,12,Yes,Microsoft Corporation,arin
+8987,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+8987,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+14618,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+16509,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+16509,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+7303,181.0.0.0/12,24,Yes,Telecom Argentina S.A.,lacnic
+7303,181.80.0.0/12,24,Yes,Telecom Argentina S.A.,lacnic
+7303,181.96.0.0/12,24,Yes,Telecom Acceso,lacnic
+8987,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+14618,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+14618,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+16509,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+12322,78.192.0.0/10,11,Yes,FR-PROXAD-FTTH,ripe
+12322,82.224.0.0/11,13,Yes,FR-PROXAD-ADSL,ripe
+12322,88.160.0.0/11,15,Yes,FR-PROXAD-ADSL,ripe
+7018,104.176.0.0/12,12,Yes,AT&T Corp.,arin
+7018,162.192.0.0/12,12,Yes,AT&T Corp.,arin
+8987,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+17421,42.64.0.0/12,24,Yes,EMOME-NET,apnic
+198949,79.80.0.0/12,24,Yes,ORG-VF1-RIPE,ripe
+198949,78.112.0.0/12,24,Yes,N9UF-DYN-DSL,ripe
+198949,77.192.0.0/12,24,Yes,SFR-USER-DATA,ripe
+198949,86.64.0.0/12,24,Yes,N9UF-PRO,ripe
+198949,77.144.0.0/12,24,Yes,SFR-USER-DATA,ripe
+198949,93.0.0.0/11,24,Yes,SFR-USER-DATA,ripe
+198949,109.0.0.0/11,24,Yes,N9UF-PRO,ripe
+22773,68.0.0.0/12,12,Yes,Cox Communications Inc.,arin
+8075,20.0.0.0/11,11,Yes,Microsoft Corporation,arin
+5089,82.32.0.0/12,12,Yes,VMCBBUK,ripe
+5089,81.96.0.0/12,12,Yes,ORG-NI9-RIPE,ripe
+5089,82.0.0.0/11,11,Yes,CYBERWARE-LTD,ripe
+5089,86.0.0.0/11,11,Yes,ORG-NI9-RIPE,ripe
+19905,196.96.0.0/12,24,Yes,SAFARICOM-PUBLIC-POOL,afrinic
+14618,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+7922,96.128.0.0/10,10,Yes,Comcast Cable Communications  LLC,arin
+8987,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+396982,34.32.0.0/11,11,Yes,Google LLC,arin
+16509,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8075,4.240.0.0/12,12,Yes,Microsoft Corporation,arin
+8987,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+3301,78.64.0.0/12,12,Yes,TELIANET,ripe
+3301,95.192.0.0/12,12,Yes,TELIANET,ripe
+3301,90.224.0.0/12,12,Yes,ORG-TA45-RIPE,ripe
+3301,81.224.0.0/12,12,Yes,TELIANET,ripe
+16509,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+14618,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+14618,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+1213,87.32.0.0/12,24,Yes,ORG-HA8-RIPE,ripe
+14618,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+55831,101.208.0.0/12,12,No,AIRCEL-IN,apnic
+8987,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+8075,40.80.0.0/12,12,Yes,Microsoft Corporation,arin
+14618,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+14618,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+5617,83.0.0.0/11,11,Yes,IP-TELEFONY,ripe
+14618,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+8075,4.160.0.0/12,12,Yes,Microsoft Corporation,arin
+4713,153.224.0.0/12,12,Yes,Open Computer Network,apnic
+4713,118.0.0.0/12,12,Yes,OCN,apnic
+55836,49.32.0.0/12,14,Yes,RELIANCEJIO-IN,apnic
+33771,105.48.0.0/12,24,Yes,SFC-2014-2G-3G-4G,afrinic
+16509,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+8075,13.64.0.0/11,11,Yes,Microsoft Corporation,arin
+3292,87.48.0.0/12,12,Yes,KABELTV,ripe
+8987,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8075,52.96.0.0/12,12,Yes,Microsoft Corporation,arin
+6805,77.176.0.0/12,12,Yes,TEDE-LLU,ripe
+6805,77.0.0.0/12,17,Yes,TEDE-ZISP,ripe
+14618,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+45609,106.192.0.0/11,24,Yes,Noida,apnic
+45609,223.176.0.0/12,24,Yes,KOLKATA-WEST-BENGAL,apnic
+7018,23.112.0.0/12,12,Yes,AT&T Corp.,arin
+7018,45.16.0.0/12,12,Yes,AT&T Corp.,arin
+7018,99.32.0.0/12,12,Yes,AT&T Corp.,arin
+7018,104.0.0.0/12,12,Yes,AT&T Corp.,arin
+7018,104.48.0.0/12,12,Yes,AT&T Corp.,arin
+7018,107.128.0.0/12,12,Yes,AT&T Corp.,arin
+7018,107.192.0.0/12,12,Yes,AT&T Corp.,arin
+7018,107.208.0.0/12,12,Yes,AT&T Corp.,arin
+7018,162.224.0.0/12,12,Yes,AT&T Corp.,arin
+47331,85.96.0.0/12,24,Yes,TurkTelekom,ripe
+47331,95.0.0.0/12,24,Yes,ttnet_as_alsat_metro_ethernet,ripe
+47331,88.224.0.0/11,24,Yes,TurkTelekom,ripe
+47331,78.160.0.0/11,24,Yes,TurkTelekom,ripe
+16509,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+16509,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+16509,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+15169,136.112.0.0/12,12,Yes,Google LLC,arin
+1659,120.96.0.0/11,11,Yes,T-NTU.EDU.TW-NET,apnic
+8987,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+22773,72.192.0.0/11,11,Yes,Cox Communications Inc.,arin
+8987,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+8987,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+8075,172.160.0.0/11,11,Yes,ORG-MA42-RIPE,arin
+8075,57.160.0.0/12,12,No,ORG-MA42-RIPE,ripe
+4713,122.16.0.0/12,12,Yes,hostmasters and include your organisation's account,apnic
+33771,196.96.0.0/12,24,Yes,SAFARICOM-PUBLIC-POOL,afrinic
+14618,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+16509,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8987,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+14618,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+14618,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+16509,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+16509,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8228,78.112.0.0/12,12,Yes,N9UF-DYN-DSL,ripe
+8987,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+7922,76.16.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+396982,34.64.0.0/12,12,Yes,Google Asia Pacific Pte. Ltd.,arin
+16509,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+396982,34.16.0.0/12,12,Yes,Google LLC,arin
+16509,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+8987,35.96.0.0/12,24,No,Amazon Technologies Inc.,arin
+7018,99.112.0.0/12,12,Yes,AT&T Corp.,arin
+19905,92.0.0.0/11,24,Yes,CPWBBSERV-NET,ripe
+19905,79.64.0.0/12,24,Yes,ORG-OTIS1-RIPE,ripe
+14618,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+10481,181.0.0.0/12,24,Yes,Telecom Argentina S.A.,lacnic
+10481,181.80.0.0/12,24,Yes,Telecom Argentina S.A.,lacnic
+10481,181.96.0.0/12,24,Yes,Telecom Acceso,lacnic
+14618,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+8075,4.208.0.0/12,12,Yes,Microsoft Corporation,arin
+3462,111.240.0.0/12,24,Yes,HINET-NET,apnic
+396982,34.80.0.0/12,12,Yes,Google LLC,arin
+8987,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+16509,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+14618,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+7922,24.0.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+22773,184.176.0.0/12,12,Yes,Cox Communications Inc.,arin
+16509,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+45102,8.128.0.0/10,18,Yes,Asia Pacific Network Information Centre,arin
+45102,8.208.0.0/12,15,Yes,Asia Pacific Network Information Centre,arin
+8987,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+55836,157.32.0.0/12,12,Yes,ORG-RJIL1-AP,arin
+14618,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+22773,174.64.0.0/12,12,Yes,Cox Communications Inc.,arin
+16509,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+14618,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+8987,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+14618,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,34.208.0.0/12,12,Yes,Amazon Technologies Inc.,arin
+8987,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+12880,2.176.0.0/12,12,Yes,tct-ADSL,ripe
+8987,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+16509,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+7922,96.64.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+16509,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+13489,181.128.0.0/12,12,Yes,EPM Telecomunicaciones S.A. E.S.P.,lacnic
+14618,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+4713,153.192.0.0/11,11,Yes,Open Computer Network,apnic
+8987,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8075,20.192.0.0/10,10,Yes,Microsoft Corporation,arin
+9121,78.160.0.0/11,24,Yes,TurkTelekom,ripe
+9121,88.224.0.0/11,24,Yes,TurkTelekom,ripe
+9121,95.0.0.0/12,24,Yes,ttnet_as_alsat_metro_ethernet,ripe
+9121,85.96.0.0/12,24,Yes,TurkTelekom,ripe
+14618,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+8987,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+4713,153.128.0.0/10,10,Yes,Open Computer Network,apnic
+7922,73.0.0.0/8,8,Yes,Comcast Cable Communications  LLC,arin
+12874,93.32.0.0/12,12,Yes,FASTWEB-PAT,ripe
+8987,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+33771,196.96.0.0/12,24,Yes,SAFARICOM-PUBLIC-POOL,afrinic
+7922,174.160.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+8987,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+14618,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,52.192.0.0/12,24,Yes,Amazon Data Services Japan,arin
+7922,98.32.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+8987,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+7922,69.240.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+14618,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+8987,54.224.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+22773,98.160.0.0/11,11,Yes,Cox Communications Inc.,arin
+237,35.0.0.0/10,10,Yes,University of Michigan,arin
+16509,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+7922,184.112.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+16509,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+8987,54.192.0.0/12,24,Yes,Amazon.com  Inc.,arin
+21928,172.32.0.0/11,24,Yes,T-Mobile USA  Inc.,arin
+16509,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+786,87.32.0.0/12,24,Yes,ORG-HA8-RIPE,ripe
+1221,1.128.0.0/11,11,Yes,ORG-TC6-AP,apnic
+1221,58.160.0.0/12,12,Yes,ORG-TC6-AP,apnic
+1221,101.160.0.0/11,11,Yes,ORG-TC6-AP,apnic
+1221,121.208.0.0/12,12,Yes,ORG-TC6-AP,apnic
+1221,124.176.0.0/12,12,Yes,ORG-TC6-AP,apnic
+8987,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+7922,74.144.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+8987,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,35.112.0.0/12,24,No,Amazon Technologies Inc.,arin
+8987,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,3.128.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8987,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8075,4.176.0.0/12,12,Yes,Microsoft Corporation,arin
+8987,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+8987,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+45595,39.32.0.0/11,15,Yes,ORG-PTCL1-AP,apnic
+45595,182.176.0.0/12,15,Yes,ORG-PTCL1-AP,apnic
+16509,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+7922,76.128.0.0/11,11,Yes,Comcast Cable Communications  LLC,arin
+3320,217.224.0.0/11,11,Yes,ORG-DTAG1-RIPE,ripe
+3320,80.128.0.0/11,11,Yes,ORG-DTAG1-RIPE,ripe
+3320,217.80.0.0/12,12,Yes,ORG-DTAG1-RIPE,ripe
+3320,46.80.0.0/12,12,Yes,ORG-DTAG1-RIPE,ripe
+3320,93.192.0.0/10,10,Yes,ORG-DTAG1-RIPE,ripe
+3320,84.128.0.0/10,10,Yes,ORG-DTAG1-RIPE,ripe
+3320,87.128.0.0/10,10,Yes,ORG-DTAG1-RIPE,ripe
+3320,79.192.0.0/10,10,Yes,ORG-DTAG1-RIPE,ripe
+3320,91.0.0.0/10,10,Yes,ORG-DTAG1-RIPE,ripe
+3320,80.128.0.0/12,12,Yes,ORG-DTAG1-RIPE,ripe
+8075,4.144.0.0/12,12,Yes,Microsoft Corporation,arin
+16509,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+36925,196.112.0.0/12,24,Yes,Mobile_Costumers,afrinic
+8987,54.240.0.0/12,24,Yes,Amazon Web Services  Inc.,arin
+8075,4.128.0.0/12,12,No,Microsoft Corporation,arin
+8987,98.80.0.0/12,24,No,Amazon.com  Inc.,arin
+8987,54.160.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+22773,70.160.0.0/11,11,Yes,Cox Communications Inc.,arin
+8987,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+14618,3.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+37963,8.128.0.0/10,15,Yes,Asia Pacific Network Information Centre,arin
+14618,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+16509,52.0.0.0/11,24,Yes,Amazon Technologies Inc.,arin
+7843,71.64.0.0/12,12,Yes,Charter Communications Inc,arin
+14618,3.64.0.0/10,24,Yes,A100 ROW GmbH,arin
+7922,174.48.0.0/12,12,Yes,Comcast Cable Communications  LLC,arin
+14618,52.64.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+14618,34.192.0.0/10,24,Yes,Amazon Technologies Inc.,arin
+8987,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+8987,54.176.0.0/12,24,Yes,Amazon.com  Inc.,arin
+1136,86.80.0.0/12,12,Yes,KPN,ripe
+8987,3.0.0.0/10,24,Yes,Amazon Data Services Singapore,arin
+14618,44.192.0.0/10,24,Yes,Amazon Data Services NoVa,arin
+16509,184.32.0.0/12,24,No,Amazon.com  Inc.,arin
+7922,50.128.0.0/9,9,Yes,Comcast Cable Communications  LLC,arin
+8987,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+16509,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+16509,35.160.0.0/12,24,Yes,Amazon.com  Inc.,arin
+14618,35.80.0.0/12,24,Yes,Amazon.com  Inc.,arin
+8987,54.80.0.0/12,24,Yes,Amazon Technologies Inc.,arin
+4713,60.32.0.0/12,12,Yes,OCN-CIDR-BLK-JP,apnic
+14618,54.144.0.0/12,24,Yes,Amazon Data Services NoVa,arin
+14618,52.32.0.0/11,24,Yes,Amazon Technologies Inc.,arin
