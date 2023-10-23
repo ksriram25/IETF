@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE rfc SYSTEM "rfc2629-xhtml.ent">
+<?rfc sortrefs="yes"?>
+<?rfc subcompact="no"?>
+<?rfc symrefs="yes"?>
+<?rfc toc="yes"?>
+<?rfc tocdepth="3"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="std" docName="draft-ietf-sidrops-rpki-prefixlist-01" ipr="trust200902" xml:lang="en" sortRefs="true" submissionType="IETF" consensus="true" version="3">
+  <front>
+    <title abbrev="RPKI PrefixList">
+      A profile for RPKI Signed Lists of Prefixes
+    </title>
+    <seriesInfo name="Internet-Draft" value="draft-ietf-sidrops-rpki-prefixlist-00"/>
+    <author fullname="Job Snijders" initials="J." surname="Snijders">
+      <organization>Fastly</organization>
+      <address>
+        <postal>
+          <street/>
+          <code/>
+          <city>Amsterdam</city>
+          <country>Netherlands</country>
+        </postal>
+        <email>job@fastly.com</email>
+      </address>
+    </author>
+    <author fullname="Geoff Huston" initials="G." surname="Huston">
+      <organization>APNIC</organization>
+      <address>
+        <postal>
+          <street>6 Cordelia St</street>
+          <code>QLD 4101</code>
+          <city>South Brisbane</city>
+          <country>Australia</country>
+        </postal>
+        <email>gih@apnic.net</email>
+      </address>
+    </author>
+    <date/>
+    <area>ops</area>
+    <workgroup>sidrops</workgroup>
+    <keyword>security</keyword>
+    <keyword>cryptography</keyword>
+    <keyword>X.509</keyword>
+    <abstract>
+      <t>
+         This document defines a "RPKI Prefix List", a Cryptographic Message Syntax (CMS) protected content type for use with the Resource Public Key Infrastructure (RPKI) to carry the complete list of prefixes which an Autonomous System (AS) may originate to all or any of its routing peers.
+         The validation of a RPKI Prefix List confirms that the holder of the listed ASN produced the object, and that this list is a current, accurate and complete description of address prefixes that may be announced into the routing system originated by this AS.
+      </t>
+    </abstract>
+  </front>
+  <middle>
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>
+        This document defines an "RPKI Prefix List", a Cryptographic Message Syntax (CMS) <xref target="RFC5652"/> <xref target="RFC6268"/> protected content type to carry a list of IP prefixes and an Autonomous System Number.
+        The list of prefixes describes the maximal set of prefixes that the Autonomous System MAY announce to any of its routing peers.
+        The content is signed by the holder of the RPKI private key associated with the listed ASN.
+      </t>
+      <t>
+        RPKI Prefix Lists allow other RPKI-validating remote routing entities to audit the collection of announcements that have the subject ASN as the originating AS.
+        Any prefixes originated by this AS not contained in a validated RPKI Prefix List SHOULD be regarded as invalid, but ultimately their consequent handling by the local routing entity that performed the audit function is a matter of local policy.
+      </t>
+      <t>
+        The intent of this object is to offer a RPKI-based successor to the <xref target="RFC2622"/> 'route-set' class objects used in Internet Routing Registries (IRRs).
+        The semantics of the route-set and the RPKI Prefix List are similair.
+        The difference is that the RPKI signature allows a relying party of be assured of the currency and authenticity of the Prefix List as a complete enumeration of all prefixes that may be announced as originating by this AS if the object can be validated by the RPKI.
+      </t>
+      <section anchor="requirements">
+        <name>Requirements Language</name>
+        <t>
+          The key words "<bcp14>MUST</bcp14>", "<bcp14>MUST NOT</bcp14>", "<bcp14>REQUIRED</bcp14>", "<bcp14>SHALL</bcp14>", "<bcp14>SHALL NOT</bcp14>", "<bcp14>SHOULD</bcp14>", "<bcp14>SHOULD NOT</bcp14>", "<bcp14>RECOMMENDED</bcp14>", "<bcp14>NOT RECOMMENDED</bcp14>", "<bcp14>MAY</bcp14>", and "<bcp14>OPTIONAL</bcp14>" in this document are to be interpreted as described in BCP&nbsp;14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in all capitals, as shown here.
+        </t>
+      </section>
+    </section>
+    <section anchor="profile">
+      <name>RPKI Signed Prefix List Profile</name>
+      <t>
+        RPKI Prefix List objects follow the Signed Object Template for the RPKI <xref target="RFC6488"/>.
+      </t>
+      <section title="EE Certificates">
+        <t>
+          The Certification Authority (CA) <bcp14>MUST</bcp14> sign only one PrefixList with each EE certificate and <bcp14>MUST</bcp14> generate a new key pair for each new PrefixList or PrefixList Opt-Out Listing.
+          This type of EE certificate is termed a "one-time-use" EE certificate (see <xref target="RFC6487" section="3"/>).
+        </t>
+      </section>
+      <section title="Object Filenames">
+        <t>
+          A guideline for naming PrefixList is that the file name chosen in the repository be a value derived from the public key of the EE certificate.
+          One such method of generating a publication name is described in Section 2.1 of <xref target="RFC4387"/>; convert the 160-bit hash of a EE's public key value into a 27-character string using a modified form of Base64 encoding, with an additional modification as proposed in Section 5, table 2, of <xref target="RFC4648"/>.
+        </t>
+      </section>
+    </section>
+    <section anchor="content">
+      <name>eContentType</name>
+      <section>
+        <name>The PrefixList eContentType</name>
+        <t>
+          The eContentType for an PrefixList is defined as id-ct-rpkiSignedPrefixList, with Object Identifier (OID) 1.2.840.113549.1.9.16.1.TBD.
+        </t>
+        <t>
+          This OID <bcp14>MUST</bcp14> appear within both the eContentType in the encapContentInfo object and the ContentType signed attribute in the signerInfo object (see <xref target="RFC6488"/>).
+        </t>
+      </section>
+    </section>
+    <section anchor="econtent">
+      <name>eContent</name>
+      <section>
+        <name>The PrefixList eContent</name>
+        <t>
+          The content of an PrefixList is a list of IP address prefixes and a single ASN.
+          An PrefixList is formally defined as follows:
+        </t>
+        <sourcecode type="asn.1" originalSrc="RpkiSignedPrefixList-2023.asn">RpkiSignedPrefixList-2023
+  { iso(1) member-body(2) us(840) rsadsi(113549)
+    pkcs(1) pkcs9(9) smime(16) mod(0)
+    id-mod-rpkiSignedPrefixList-2023(TBD) }
+
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+
+IMPORTS
+  CONTENT-TYPE
+  FROM CryptographicMessageSyntax-2010 -- in [RFC6268]
+    { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
+      pkcs-9(9) smime(16) modules(0) id-mod-cms-2009(58) } ;
+
+ct-rpkiSignedPrefixList CONTENT-TYPE ::=
+  { TYPE RpkiSignedPrefixList
+    IDENTIFIED BY id-ct-rpkiSignedPrefixList }
+
+id-ct-rpkiSignedPrefixList OBJECT IDENTIFIER ::=
+  { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1)
+    pkcs-9(9) id-smime(16) id-ct(1) TBD }
+
+RpkiSignedPrefixList ::= SEQUENCE {
+  version [0]     INTEGER DEFAULT 0,
+  asID            ASID,
+  prefixList      SEQUENCE (SIZE(0..MAX)) OF AddressFamilyIPAddress }
+
+ASID ::= INTEGER (1..4294967295)
+
+AddressFamilyIPAddress ::= SEQUENCE {
+  addressFamily ADDRESS-FAMILY.&amp;afi ({AddressFamilySet}),
+  prefix        ADDRESS-FAMILY.&amp;Prefix ({AddressFamilySet}{@addressFamily}) }
+
+ADDRESS-FAMILY ::= CLASS {
+  &amp;afi          OCTET STRING (SIZE(2)) UNIQUE,
+  &amp;Prefix
+} WITH SYNTAX { AFI &amp;afi PREFIX-TYPE &amp;Prefix }
+
+AddressFamilySet ADDRESS-FAMILY ::= { addressFamilyIPv4 | addressFamilyIPv6 }
+
+addressFamilyIPv4 ADDRESS-FAMILY ::= { AFI afi-IPv4 PREFIX-TYPE AddressesIPv4 }
+addressFamilyIPv6 ADDRESS-FAMILY ::= { AFI afi-IPv6 PREFIX-TYPE AddressesIPv6 }
+
+afi-IPv4 OCTET STRING ::= '0001'H
+afi-IPv6 OCTET STRING ::= '0002'H
+
+AddressesIPv4 ::= Prefix{32}
+AddressesIPv6 ::= Prefix{128}
+
+Prefix {INTEGER: len} ::= SEQUENCE {
+  address       BIT STRING (SIZE(0..len)) }
+
+END
+</sourcecode>
+        <section>
+          <name>Version</name>
+          <t>
+            The version number of the RpkiSignedPrefixList <bcp14>MUST</bcp14> be 0.
+          </t>
+        </section>
+        <section>
+          <name>asID</name>
+          <t>
+            The Autonomous System Number contained here <bcp14>MUST</bcp14> be a contained within the set of AS Identifier resources listed by the EE certificate carried in the CMS certificates field.
+          </t>
+        </section>
+        <section>
+          <name>prefixList</name>
+          <t>
+            This field contains a SEQUENCE of AddressFamilyIPAddress.
+            The AddressFamilyIPAddress elements <bcp14>MUST</bcp14> be ordered in ascending order: first by numeric value of the addressFamily field, then by value of the prefix field.
+          </t>
+          <section>
+            <name>Element AddressFamilyIPAddress</name>
+            <t>
+              This field contains a SEQUENCE which contains one instance of addressFamily and one instance of prefix.
+            </t>
+            <section>
+              <name>addressFamily</name>
+              <t>
+                This field contains a OCTET STRING which is either '0001'H (IPv4) or '0002'H (IPv6).
+              </t>
+            </section>
+            <section>
+              <name>prefix</name>
+              <t>
+                This field contains a BIT STRING, its length bounded through the addressFamily field.
+                The type is a BIT STRING, see Section 2.2.3.8 of <xref target="RFC3779"/> for more information.
+              </t>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <section anchor="validation">
+      <name>PrefixList Validation</name>
+      <t>
+        To validate an PrefixList, the RP <bcp14>MUST</bcp14> perform all the validation checks specified in <xref target="RFC6488"/>.
+        In addition, the RP <bcp14>MUST</bcp14> perform the following validation steps:
+      </t>
+      <ol>
+        <li>
+          The contents of the CMS eContent field <bcp14>MUST</bcp14> conform to all of the constraints described in <xref target="econtent"/>.
+        </li>
+        <li>
+          The Autonomous System Identifier Delegation extension <xref target="RFC3779"/> <bcp14>MUST</bcp14> be present in the EE certificate contained in the CMS certificates field.
+        </li>
+        <li>
+          The AS identifier present in the RpkiSignedPrefixList eContent 'asID' field <bcp14>MUST</bcp14> be a subset of the AS Indentifiers present in the certificate extension.
+        </li>
+        <li>
+          The Autonomous System Identifier Delegation extension <bcp14>MUST NOT</bcp14> contain "inherit" elements.
+        </li>
+        <li>
+          The IP Address Delegation Extension <xref target="RFC3779"/> is not used in PrefixList, and <bcp14>MUST NOT</bcp14> be present in the EE certificate.
+        </li>
+      </ol>
+    </section>
+	<section title="Recommendations for Creation of PrefixList Object" anchor="recs">
+	<!-- maxLength Consideration for PrefixList -->
+	  <t>
+		An AS SHOULD include all prefixes it originates in its PrefixList. These would include prefixes it owns 
+		and the prefixes of BYOIP customers. 
+		It is understood that some of these prefixes may have ROA coverage and some may not.
+	  </t>
+      <t>
+		There appears to be no need to include a maxLength in the PrefixList object. 
+		The reason is as follows. 
+		Even if a prefix originated by an AS (whether the prefix is owned by the AS owner or BYOIP) 
+		has a ROA with maxLength (greater than the prefix length), 
+		typically only the prefix and possibly some of its subprefixes 
+		(i.e., subsumed more specific prefixes) are announced in BGP.
+		The owner of the prefix informs the AS operator (typically via a customer interface) 
+		about the prefixes and subprefixes (if any) it intends to announce, 
+		and only those prefixes/subprefixes SHOULD be included in the PrefixList.
+		Other subprefixes SHOULD NOT be included merely because 
+		they are permitted by the ROA or its maxLength.  
+		This narrows the attack surface for forged-origin subprefix hijacks 
+		which may be otherwise wide due to the ROA maxLength (also see <xref target="reduce"/>).
+      </t>
+	</section>
+	<section title="Route Verification: State Space and Outcomes" anchor="outcomes">
+      <t>
+		The state-space for route verification considering ROV and PrefixList is enumerated in <xref target="state-space"/>.
+		Also, mentioned are the combined results for each state from combining both verifcations.
+		A RECOMMENDED route selection policy is also mentioned in the last column of <xref target="state-space"/>.
+		A network operator is free to select a policy that they consider most appropriate.
+		The use of the term "route is ineligible" in this document has the same meaning as in RFC 4271,
+		i.e., "route is ineligible to be installed in Loc-RIB and will be excluded from the next phase of route selection"		
+      </t>
+        <table anchor="state-space" align="center">
+          <name/>
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1">Index</th>
+              <th rowspan="1" colspan="1">ROV</th>
+              <th rowspan="1" colspan="1">PrefixList Verif.</th>
+              <th rowspan="1" colspan="1">Combined Verif.</th>
+              <th rowspan="1" colspan="1">Route Selection</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Valid</td>
+              <td>Valid</td>
+              <td>Valid</td>
+              <td>Eligible</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Valid</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>Eligible</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Valid</td>
+              <td>Invalid</td>
+              <td>Invalid</td>
+              <td>Ineligible</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Unknown</td>
+              <td>Valid</td>
+              <td>Unknown</td>
+              <td>Eligible</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>Unknown</td>
+              <td>Eligible</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Unknown</td>
+              <td>Invalid</td>
+              <td>Invalid</td>
+              <td>Ineligible</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Invalid</td>
+              <td>Valid</td>
+              <td>Invalid</td>
+              <td>Ineligible</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Invalid</td>
+              <td>Unknown</td>
+              <td>Invalid</td>
+              <td>Ineligible</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Invalid</td>
+              <td>Invalid</td>
+              <td>Invalid</td>
+              <td>Ineligible</td>
+            </tr>
+          </tbody>
+        </table>
+	</section>
+	<section title="Problems Solved by PrefixList" anchor="problems">
+      <t>
+		There are four types of security vulnerabilities in BGP that the PrefixList object helps solve.
+		These are described below.
+      </t>
+	  <section title="AS Abuse While Hijacking an ROV-Unknown Prefix" anchor="abuse1">
+	    <t>
+		If AS A creates a PrefixList, it is protected in case an offending AS X inserts AS A 
+		as the origin AS and hijacks a third party prefix not covered by a ROA.
+		The route will be ROV-Unknown and PrefixList Invalid and hence 
+		considered ineligible by an RP (see row 6 in <xref target="state-space"/>). 
+		Thus, AS A protects itself from this form of AS abuse. 		
+        </t>
+	  </section>
+	  <section title="AS Abuse Together with a Bogus ROA" anchor="abuse2">
+	    <t>
+		If AS A creates a PrefixList, it is protected in case an offending AS X inserts AS A 
+		as the origin AS and announces a prefix for which AS X has an RPKI certificate
+		and creates a bogus ROA showing AS A as the origin.		
+		The route will be ROV-Valid due to the bogus ROA but PrefixList Invalid 
+		and hence considered ineligible by an RP (see row 3 in <xref target="state-space"/>).
+		Thus, AS A protects itself from this second form of AS abuse as well. 		
+        </t>
+	  </section>
+	  <section title="AS Accidentally Strips AS_PATH and Mis-Originates Prefixes" anchor="abuse3">
+	    <t>
+		A multihomed AS learns a route from eBGP neighbor and announces the prefix to 
+		another eBGP neighbor as if it is being originated by it (i.e., strips the received 
+		AS_PATH and re-originates the prefix). This can be called re-origination or mis-origination
+		(also see Type 5 route leak in RFC 7908).   
+		This problem has sometimes happened in practice due to a malfunctioning route optimizer.
+		If the affected prefixes have ROA coverage, then ROV at a subsequent AS would detect this anomaly.
+		However, if the affected prefixes do not have ROA coveage, then these prefixes
+		will be ROV-Unknown and PrefixList Invalid and considered Invalid by an RP
+		(per row 6 in <xref target="state-space"/>) provided that the leaking AS has registered a PrefixList.
+		Thus, a leaking AS protects itself in the sense that when the leaks (mis-originations) reach
+		a neighbor AS that is doing PrefixList based verification, they will be detected and blocked
+		from further propagation.   			
+        </t>
+	  </section>
+	  <section title="Attack Surface Reduction" anchor="reduce">
+	    <t>
+		Often a prefix owner includes more specific prefixes (using maxLength or otherwise) in their ROA
+		but has no plans to annouce some or many of them. Due to this, they tend to create 
+		a larger attack surface for forged-origin subprefix hijacks.
+		However, they would notify the operator of the AS serving them for origination
+		about the prefixes they do intend to originate, and the AS operator would include
+		only those prefixes in the AS's PrefixList. This helps to reduce the attack surface
+		for the forged-origin subprefix hijacks (per row 3 in <xref target="state-space"/>).   		
+        </t>
+      </section>
+	</section>
+    <section>
+      <name>Operational Considerations</name>
+      <t>
+        Multiple valid PrefixList objects could exist which contain the same asID.
+        In such cases the union of address prefix members forms the complete set of members.
+        It is highly <bcp14>RECOMMENDED</bcp14> that a compliant CA maintains a single PrefixList for a given asID.
+      </t>
+      <t>
+	If an AS holder publishes a PrefixList, then relying parties SHOULD assume that the list is complete for that originating AS, and the presence of any route with the same AS as the originating AS and an address prefix that is not included in the Prefix List implies that the route has been propagated within the routing system without the permission of the originating AS.
+      </t>
+      <t>
+        The construction of an 'allowlist' for a given EBGP session using RPKI PrefixList(s) compliments best practises <xref target="RFC7454"/> and rejecting RPKI-invalid BGP route announcements <xref target="RFC6811"/>.
+        In other words, if a given BGP route is covered by a RPKI PrefixList, but also is "invalid" from a Route Origin Validation perspective, it is RECOMMENDED to reject the route announcement.
+      </t>
+	  <section title="Managing Expectations when Prefix Owner Splits a Prefix" anchor="split-prefix">
+	    <t>
+		A prefix owner with a prefix listed in the PrefixList of an AS may one day decide to split its prefix
+		and announce only a more specific prefix (subsumed under the prefix) from the AS in consideration.
+		This operation needs to be managed gracefully applying the make-before-break principle.
+		When notified of the intent, the AS would update its PrefixList to reflect the change.
+		However, the updated PrefixList would take some time to propagate to the RPs.
+		So, the AS would continue to announce the original prefix as well as the more-specific
+		prefix for the period of time necessary for the propagation of the updated PrefixList.
+		The period of time may be based on an estimate of the propagation time such as
+		its anticipated 95th-percentile value.
+		The prefix owner is kept informed of the resuting wait times.  
+        </t>
+      </section>
+	  <section title="Managing Expectations when Prefix Owner Has A New Prefix" anchor="new-prefix">
+	    <t>
+		A prefix owner with a prefix listed in the PrefixList of an AS may one day obtain a new prefix
+		and wish to announce it from the AS in consideration.
+		The AS operator would recommend to the prefix owner to create a ROA for the new prefix if not already done.
+		The prefix owner may or may not be RPKI capable.
+		In any case, the AS operator would update its PrefixList to add the new prefix. 
+		However, the updated PrefixList would take some time to propagate to the RPs.
+		The AS operator would delay the announcemnt of the new prefix for a period of time necessary 
+		for the propagation of the updated PrefixList.
+		The period of time may be based on an estimate of the propagation time such as
+		its anticipated 95th-percentile value.
+		The prefix owner is kept informed of the resuting wait times.
+        </t>
+      </section>
+	  <section title="Why ROA Prefixes are not Simply Copied into PrefixList?" anchor="copy-roa">
+	  <t>
+		It may be argued that including everything from any applicable ROA 
+		(including the optional maxLength if it exists) in the PrefixList object 
+		makes the PrefixList more effective. 
+		One may reason that if the prefix owner decides at a future date to annouce (from the AS in consideration) 
+		more specific prefixes permitted by the ROA, the PrefixList would be ready for it a priori. 
+		However, the benefit of a pragmatic PrefixList, i.e., reducing
+		the attack surface for potential subprefix hijacks, is lost. 
+		So, there is a trade-off and it appears better to opt for not copying prefixes from ROA 
+		into the PrefixList and not including an optional maxLength in the PrefixList.
+		Instead include in the PrefixList only the prefixes requested by the prefix owners
+		for origination (typically via a customer interface). 
+		This helps preserve the benefit of reduced attack surface. 
+		If a prefix owner wishes readiness for future instantaneous annoucement of some split prefixes
+		under some circumstances, they can include them in their ROA a priori,
+		and simultaneosuly inform the AS operator to include them in the PrefixList as well.
+      </t>
+      </section>
+    </section>
+    <section anchor="security">
+      <name>Security Considerations</name>
+      <t>
+        Relying Parties are warned that the data in an PrefixList is self-asserted by the AS holder.
+        There is no implied authority from any IP prefix holder that grants the AS permission to originate a route for any prefixes.
+        Such an authority is separately conveyed in the RPKI as a ROA.
+      </t>
+      <t>
+        While a one-time-use EE certificate must only be used to generate and sign a single PrefixList object, CAs technically are not restricted from generating and signing multiple different PrefixList objects with a single key pair.
+        Any PrefixList objects sharing the same EE certificate cannot be revoked individually.
+      </t>
+    </section>
+    <section anchor="iana">
+      <name>IANA Considerations</name>
+      <section>
+        <name>SMI Security for S/MIME CMS Content Type (1.2.840.113549.1.9.16.1)</name>
+        <t>
+          IANA is requested to allocated the following in the "SMI Security for S/MIME CMS Content Type (1.2.840.113549.1.9.16.1)" registry:
+        </t>
+        <table anchor="cms-content-type" align="center">
+          <name/>
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1">Decimal</th>
+              <th rowspan="1" colspan="1">Description</th>
+              <th rowspan="1" colspan="1">References</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TBD</td>
+              <td>id-ct-rpkiSignedPrefixList</td>
+              <td>draft-spaghetti-sidrops-rpki-prefixlist</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <name>RPKI Signed Objects</name>
+        <t>
+          IANA is requested to register two OIDs in the "RPKI Signed Objects" registry <xref target="RFC6488"/> as follows:
+        </t>
+        <table anchor="rpki-signed-prefixlist" align="center">
+          <name/>
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1">Name</th>
+              <th rowspan="1" colspan="1">OID</th>
+              <th rowspan="1" colspan="1">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Signed PrefixList</td>
+              <td>1.2.840.113549.1.9.16.1.TBD</td>
+              <td>draft-spaghetti-sidrops-rpki-prefixlist</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <name>RPKI Repository Name Schemes</name>
+        <t>
+          IANA is requested to add the Signed PrefixList file extension to the "RPKI Repository Name Schemes" registry <xref target="RFC6481"/> as follows:
+        </t>
+        <table anchor="rpki-repository-name-schemes" align="center">
+          <name/>
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1">Filename Extension</th>
+              <th rowspan="1" colspan="1">RPKI Object</th>
+              <th rowspan="1" colspan="1">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>.pfx</td>
+              <td>Signed PrefixList</td>
+              <td>draft-spaghetti-sidrops-rpki-prefixlist</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <name>SMI Security for S/MIME Module Identifier (1.2.840.113549.1.9.16.0)</name>
+        <t>
+          IANA is requested to allocate the following in the "SMI Security for S/MIME Module Identifier (1.2.840.113549.1.9.16.0)" registry:
+        </t>
+        <table anchor="smi-security-identifier" align="center">
+          <name/>
+          <thead>
+            <tr>
+              <th rowspan="1" colspan="1">Decimal</th>
+              <th rowspan="1" colspan="1">Description</th>
+              <th rowspan="1" colspan="1">References</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TBD</td>
+              <td>id-mod-rpkiSignedPrefixList-2023</td>
+              <td>draft-spaghetti-sidrops-rpki-prefixlist</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <name>Media Types</name>
+        <t>
+          IANA is requested to register the media type "application/rpki-prefixlist" in the "Media Types" registry as follows:
+        </t>
+        <section>
+          <name>PrefixList Media Type</name>
+          <dl spacing="compact">
+            <dt>Type name:</dt>
+            <dd>application</dd>
+            <dt>Subtype name:</dt>
+            <dd>rpki-prefixlist</dd>
+            <dt>Required parameters:</dt>
+            <dd>N/A</dd>
+            <dt>Optional parameters:</dt>
+            <dd>N/A</dd>
+            <dt>Encoding considerations:</dt>
+            <dd>binary</dd>
+            <dt>Security considerations:</dt>
+            <dd>Carries an RPKI Signed PrefixList. This media type contains no active content. See <xref target="validation"/> of draft-spaghetti-sidrops-rpki-prefixlist for further information.</dd>
+            <dt>Interoperability considerations:</dt>
+            <dd>N/A</dd>
+            <dt>Published specification:</dt>
+            <dd>draft-spaghetti-sidrops-rpki-prefixlist</dd>
+            <dt>Applications that use this media type:</dt>
+            <dd>RPKI operators</dd>
+            <dt>Fragment identifier considerations:</dt>
+            <dd>N/A</dd>
+            <dt>Additional information:</dt>
+            <dd>
+              <dl spacing="compact">
+                <dt><br/></dt>
+                <dd/>
+                <dt>Content:</dt>
+                <dd>This media type is a signed object, as defined in [RFC6488], which contains a payload of a list of checksums as defined in draft-spaghetti-sidrops-rpki-prefixlist.</dd>
+                <dt>Magic number(s):</dt>
+                <dd>N/A</dd>
+                <dt>File extension(s):</dt>
+                <dd>.pfx</dd>
+                <dt>Macintosh file type code(s):</dt>
+                <dd>N/A</dd>
+              </dl>
+            </dd>
+            <dt>Person &amp; email address to contact for further information:</dt>
+            <dd>Job Snijders (job@fastly.com)</dd>
+            <dt>Intended usage:</dt>
+            <dd>COMMON</dd>
+            <dt>Restrictions on usage:</dt>
+            <dd>N/A</dd>
+            <dt>Author:</dt>
+            <dd>Job Snijders (job@fastly.com)</dd>
+            <dt>Change controller:</dt>
+            <dd>IETF</dd>
+          </dl>
+        </section>
+      </section>
+    </section>
+  </middle>
+  <back>
+    <references>
+      <name>References</name>
+      <references>
+        <name>Normative References</name>
+        <reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml">
+          <front>
+            <title>Key words for use in RFCs to Indicate Requirement Levels</title>
+            <author fullname="S. Bradner" initials="S." surname="Bradner"/>
+            <date month="March" year="1997"/>
+            <abstract>
+              <t>In many standards track documents several words are used to signify the requirements in the specification. These words are often capitalized. This document defines these words as they should be interpreted in IETF documents. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</t>
+            </abstract>
+          </front>
+          <seriesInfo name="BCP" value="14"/>
+          <seriesInfo name="RFC" value="2119"/>
+          <seriesInfo name="DOI" value="10.17487/RFC2119"/>
+        </reference>
+        <reference anchor="RFC2622" target="https://www.rfc-editor.org/info/rfc2622" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2622.xml">
+          <front>
+            <title>Routing Policy Specification Language (RPSL)</title>
+            <author fullname="C. Alaettinoglu" initials="C." surname="Alaettinoglu"/>
+            <author fullname="C. Villamizar" initials="C." surname="Villamizar"/>
+            <author fullname="E. Gerich" initials="E." surname="Gerich"/>
+            <author fullname="D. Kessens" initials="D." surname="Kessens"/>
+            <author fullname="D. Meyer" initials="D." surname="Meyer"/>
+            <author fullname="T. Bates" initials="T." surname="Bates"/>
+            <author fullname="D. Karrenberg" initials="D." surname="Karrenberg"/>
+            <author fullname="M. Terpstra" initials="M." surname="Terpstra"/>
+            <date month="June" year="1999"/>
+            <abstract>
+              <t>RPSL allows a network operator to be able to specify routing policies at various levels in the Internet hierarchy; for example at the Autonomous System (AS) level. At the same time, policies can be specified with sufficient detail in RPSL so that low level router configurations can be generated from them. RPSL is extensible; new routing protocols and new protocol features can be introduced at any time. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="2622"/>
+          <seriesInfo name="DOI" value="10.17487/RFC2622"/>
+        </reference>
+        <reference anchor="RFC3779" target="https://www.rfc-editor.org/info/rfc3779" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3779.xml">
+          <front>
+            <title>X.509 Extensions for IP Addresses and AS Identifiers</title>
+            <author fullname="C. Lynn" initials="C." surname="Lynn"/>
+            <author fullname="S. Kent" initials="S." surname="Kent"/>
+            <author fullname="K. Seo" initials="K." surname="Seo"/>
+            <date month="June" year="2004"/>
+            <abstract>
+              <t>This document defines two X.509 v3 certificate extensions. The first binds a list of IP address blocks, or prefixes, to the subject of a certificate. The second binds a list of autonomous system identifiers to the subject of a certificate. These extensions may be used to convey the authorization of the subject to use the IP addresses and autonomous system identifiers contained in the extensions. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="3779"/>
+          <seriesInfo name="DOI" value="10.17487/RFC3779"/>
+        </reference>
+        <reference anchor="RFC5652" target="https://www.rfc-editor.org/info/rfc5652" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.5652.xml">
+          <front>
+            <title>Cryptographic Message Syntax (CMS)</title>
+            <author fullname="R. Housley" initials="R." surname="Housley"/>
+            <date month="September" year="2009"/>
+            <abstract>
+              <t>This document describes the Cryptographic Message Syntax (CMS). This syntax is used to digitally sign, digest, authenticate, or encrypt arbitrary message content. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="STD" value="70"/>
+          <seriesInfo name="RFC" value="5652"/>
+          <seriesInfo name="DOI" value="10.17487/RFC5652"/>
+        </reference>
+        <reference anchor="RFC6481" target="https://www.rfc-editor.org/info/rfc6481" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6481.xml">
+          <front>
+            <title>A Profile for Resource Certificate Repository Structure</title>
+            <author fullname="G. Huston" initials="G." surname="Huston"/>
+            <author fullname="R. Loomans" initials="R." surname="Loomans"/>
+            <author fullname="G. Michaelson" initials="G." surname="Michaelson"/>
+            <date month="February" year="2012"/>
+            <abstract>
+              <t>This document defines a profile for the structure of the Resource Public Key Infrastructure (RPKI) distributed repository. Each individual repository publication point is a directory that contains files that correspond to X.509/PKIX Resource Certificates, Certificate Revocation Lists and signed objects. This profile defines the object (file) naming scheme, the contents of repository publication points (directories), and a suggested internal structure of a local repository cache that is intended to facilitate synchronization across a distributed collection of repository publication points and to facilitate certification path construction. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="6481"/>
+          <seriesInfo name="DOI" value="10.17487/RFC6481"/>
+        </reference>
+        <reference anchor="RFC6487" target="https://www.rfc-editor.org/info/rfc6487" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6487.xml">
+          <front>
+            <title>A Profile for X.509 PKIX Resource Certificates</title>
+            <author fullname="G. Huston" initials="G." surname="Huston"/>
+            <author fullname="G. Michaelson" initials="G." surname="Michaelson"/>
+            <author fullname="R. Loomans" initials="R." surname="Loomans"/>
+            <date month="February" year="2012"/>
+            <abstract>
+              <t>This document defines a standard profile for X.509 certificates for the purpose of supporting validation of assertions of "right-of-use" of Internet Number Resources (INRs). The certificates issued under this profile are used to convey the issuer's authorization of the subject to be regarded as the current holder of a "right-of-use" of the INRs that are described in the certificate. This document contains the normative specification of Certificate and Certificate Revocation List (CRL) syntax in the Resource Public Key Infrastructure (RPKI). This document also specifies profiles for the format of certificate requests and specifies the Relying Party RPKI certificate path validation procedure. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="6487"/>
+          <seriesInfo name="DOI" value="10.17487/RFC6487"/>
+        </reference>
+        <reference anchor="RFC6488" target="https://www.rfc-editor.org/info/rfc6488" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6488.xml">
+          <front>
+            <title>Signed Object Template for the Resource Public Key Infrastructure (RPKI)</title>
+            <author fullname="M. Lepinski" initials="M." surname="Lepinski"/>
+            <author fullname="A. Chi" initials="A." surname="Chi"/>
+            <author fullname="S. Kent" initials="S." surname="Kent"/>
+            <date month="February" year="2012"/>
+            <abstract>
+              <t>This document defines a generic profile for signed objects used in the Resource Public Key Infrastructure (RPKI). These RPKI signed objects make use of Cryptographic Message Syntax (CMS) as a standard encapsulation format. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="6488"/>
+          <seriesInfo name="DOI" value="10.17487/RFC6488"/>
+        </reference>
+        <reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml">
+          <front>
+            <title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title>
+            <author fullname="B. Leiba" initials="B." surname="Leiba"/>
+            <date month="May" year="2017"/>
+            <abstract>
+              <t>RFC 2119 specifies common key words that may be used in protocol specifications. This document aims to reduce the ambiguity by clarifying that only UPPERCASE usage of the key words have the defined special meanings.</t>
+            </abstract>
+          </front>
+          <seriesInfo name="BCP" value="14"/>
+          <seriesInfo name="RFC" value="8174"/>
+          <seriesInfo name="DOI" value="10.17487/RFC8174"/>
+        </reference>
+      </references>
+      <references>
+        <name>Informative References</name>
+        <reference anchor="RFC4387" target="https://www.rfc-editor.org/info/rfc4387" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4387.xml">
+          <front>
+            <title>Internet X.509 Public Key Infrastructure Operational Protocols: Certificate Store Access via HTTP</title>
+            <author fullname="P. Gutmann" initials="P." role="editor" surname="Gutmann"/>
+            <date month="February" year="2006"/>
+            <abstract>
+              <t>The protocol conventions described in this document satisfy some of the operational requirements of the Internet Public Key Infrastructure (PKI). This document specifies the conventions for using the Hypertext Transfer Protocol (HTTP/HTTPS) as an interface mechanism to obtain certificates and certificate revocation lists (CRLs) from PKI repositories. Additional mechanisms addressing PKIX operational requirements are specified in separate documents. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="4387"/>
+          <seriesInfo name="DOI" value="10.17487/RFC4387"/>
+        </reference>
+        <reference anchor="RFC4648" target="https://www.rfc-editor.org/info/rfc4648" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4648.xml">
+          <front>
+            <title>The Base16, Base32, and Base64 Data Encodings</title>
+            <author fullname="S. Josefsson" initials="S." surname="Josefsson"/>
+            <date month="October" year="2006"/>
+            <abstract>
+              <t>This document describes the commonly used base 64, base 32, and base 16 encoding schemes. It also discusses the use of line-feeds in encoded data, use of padding in encoded data, use of non-alphabet characters in encoded data, use of different encoding alphabets, and canonical encodings. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="4648"/>
+          <seriesInfo name="DOI" value="10.17487/RFC4648"/>
+        </reference>
+        <reference anchor="RFC6268" target="https://www.rfc-editor.org/info/rfc6268" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6268.xml">
+          <front>
+            <title>Additional New ASN.1 Modules for the Cryptographic Message Syntax (CMS) and the Public Key Infrastructure Using X.509 (PKIX)</title>
+            <author fullname="J. Schaad" initials="J." surname="Schaad"/>
+            <author fullname="S. Turner" initials="S." surname="Turner"/>
+            <date month="July" year="2011"/>
+            <abstract>
+              <t>The Cryptographic Message Syntax (CMS) format, and many associated formats, are expressed using ASN.1. The current ASN.1 modules conform to the 1988 version of ASN.1. This document updates some auxiliary ASN.1 modules to conform to the 2008 version of ASN.1; the 1988 ASN.1 modules remain the normative version. There are no bits- on-the-wire changes to any of the formats; this is simply a change to the syntax. This document is not an Internet Standards Track specification; it is published for informational purposes.</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="6268"/>
+          <seriesInfo name="DOI" value="10.17487/RFC6268"/>
+        </reference>
+        <reference anchor="RFC6811" target="https://www.rfc-editor.org/info/rfc6811" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6811.xml">
+          <front>
+            <title>BGP Prefix Origin Validation</title>
+            <author fullname="P. Mohapatra" initials="P." surname="Mohapatra"/>
+            <author fullname="J. Scudder" initials="J." surname="Scudder"/>
+            <author fullname="D. Ward" initials="D." surname="Ward"/>
+            <author fullname="R. Bush" initials="R." surname="Bush"/>
+            <author fullname="R. Austein" initials="R." surname="Austein"/>
+            <date month="January" year="2013"/>
+            <abstract>
+              <t>To help reduce well-known threats against BGP including prefix mis- announcing and monkey-in-the-middle attacks, one of the security requirements is the ability to validate the origination Autonomous System (AS) of BGP routes. More specifically, one needs to validate that the AS number claiming to originate an address prefix (as derived from the AS_PATH attribute of the BGP route) is in fact authorized by the prefix holder to do so. This document describes a simple validation mechanism to partially satisfy this requirement. [STANDARDS-TRACK]</t>
+            </abstract>
+          </front>
+          <seriesInfo name="RFC" value="6811"/>
+          <seriesInfo name="DOI" value="10.17487/RFC6811"/>
+        </reference>
+        <reference anchor="RFC7454" target="https://www.rfc-editor.org/info/rfc7454" xml:base="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7454.xml">
+          <front>
+            <title>BGP Operations and Security</title>
+            <author fullname="J. Durand" initials="J." surname="Durand"/>
+            <author fullname="I. Pepelnjak" initials="I." surname="Pepelnjak"/>
+            <author fullname="G. Doering" initials="G." surname="Doering"/>
+            <date month="February" year="2015"/>
+            <abstract>
+              <t>The Border Gateway Protocol (BGP) is the protocol almost exclusively used in the Internet to exchange routing information between network domains. Due to this central nature, it is important to understand the security measures that can and should be deployed to prevent accidental or intentional routing disturbances.</t>
+              <t>This document describes measures to protect the BGP sessions itself such as Time to Live (TTL), the TCP Authentication Option (TCP-AO), and control-plane filtering. It also describes measures to better control the flow of routing information, using prefix filtering and automation of prefix filters, max-prefix filtering, Autonomous System (AS) path filtering, route flap dampening, and BGP community scrubbing.</t>
+            </abstract>
+          </front>
+          <seriesInfo name="BCP" value="194"/>
+          <seriesInfo name="RFC" value="7454"/>
+          <seriesInfo name="DOI" value="10.17487/RFC7454"/>
+        </reference>
+      </references>
+    </references>
+    <section anchor="acknowledgements">
+      <name>Acknowledgements</name>
+      <t>
+        The authors wish to thank
+        <contact fullname="Russ Housley"/>
+        for feedback.
+      </t>
+    </section>
+    <section>
+      <name>Example payloads</name>
+      <section anchor="example-prefixlist">
+        <name>Example PrefixList eContent Payload</name>
+        <t>
+        Below an example of a DER encoded PrefixList eContent is provided with annotation following the '#' character.
+        </t>
+        <artwork>
+<![CDATA[
+$ cat << EOF | xxd -r -ps | openssl asn1parse -inform DER -i -dump
+3081a202023cca30819b306d04020001306703040043ddf5030400a5fee1
+030506a5feff00030400c093a8030400c22047030400c63a03030401cc02
+1e030400d11800030400d11801030407d11880030404d11810030400d118
+03030405d11820030402d11804030406d11840030403d11808030400d118
+08302a04020002302403070120010418144e0307002001067c208c030700
+200107fbfd040307002607fae00245
+EOF
+    0:d=0  hl=3 l= 153 cons: SEQUENCE
+    3:d=1  hl=2 l=   2 prim:  INTEGER        :3CCA # AS 15562
+    7:d=1  hl=3 l= 146 cons:  SEQUENCE
+   10:d=2  hl=2 l= 109 cons:   SEQUENCE
+   12:d=3  hl=2 l=   2 prim:    OCTET STRING
+      0000 - 00 01                              .. # IPv4 AFI
+   16:d=3  hl=2 l= 103 cons:    SEQUENCE
+   18:d=4  hl=2 l=   4 prim:     BIT STRING
+      0000 - 00 43 dd f5                      .C.. # 67.221.245.0/24
+   24:d=4  hl=2 l=   4 prim:     BIT STRING
+      0000 - 00 a5 fe e1                      .... # 165.254.225.0/24
+   30:d=4  hl=2 l=   5 prim:     BIT STRING
+      0000 - 06 a5 fe ff                      .... # 165.254.255.0/26
+      0005 - <SPACES/NULS>
+... snip ...
+  121:d=2  hl=2 l=  33 cons:   SEQUENCE
+  123:d=3  hl=2 l=   2 prim:    OCTET STRING
+      0000 - 00 02                            ..
+  127:d=3  hl=2 l=  27 cons:    SEQUENCE
+  129:d=4  hl=2 l=   7 prim:     BIT STRING
+      0000 - 01 20 01 04 18 14 4e             . ....N # 2001:418:144e::/47
+  138:d=4  hl=2 l=   7 prim:     BIT STRING
+      0000 - 00 20 01 06 7c 20 8c             . ..| . # 2001:67c:208c::/48
+  147:d=4  hl=2 l=   7 prim:     BIT STRING
+      0000 - 00 20 01 07 fb fd 04             . ..... # 2001:7fb:fd04::/48
+  156:d=4  hl=2 l=   7 prim:     BIT STRING
+      0000 - 00 26 07 fa e0 02 45             .&....E # 2607:fae0:245::/48
+]]>
+      </artwork>
+      </section>
+    </section>
+    <section removeInRFC="true">
+      <name>Implementation status</name>
+      <t>
+        This section records the status of known implementations of the protocol defined by this specification at the time of posting of this Internet-Draft, and is based on a proposal described in RFC 7942.
+        The description of implementations in this section is intended to assist the IETF in its decision processes in progressing drafts to RFCs.
+        Please note that the listing of any individual implementation here does not imply endorsement by the IETF.
+        Furthermore, no effort has been spent to verify the information presented here that was supplied by IETF contributors.
+        This is not intended as, and must not be construed to be, a catalog of available implementations or their features.
+        Readers are advised to note that other implementations may exist.
+      </t>
+      <t>
+        According to RFC 7942, "this will allow reviewers and working groups to assign due consideration to documents that have the benefit of running code, which may serve as evidence of valuable experimentation and feedback that have made the implemented protocols more mature.
+        It is up to the individual working groups to use this information as they see fit".
+      </t>
+      <ul>
+        <li>
+          Example .pfx files were created by Job Snijders with the use of asn1c and OpenSSL.
+        </li>
+      </ul>
+    </section>
+  </back>
+</rfc>
