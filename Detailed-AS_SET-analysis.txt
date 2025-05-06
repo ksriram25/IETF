@@ -1,4 +1,9 @@
-﻿AS_SET ANALYSIS (OREGON 2019-10-03:00)
+Detailed analysis of AS_SETs in BGP updates
+
+Authors: Lilia Hannachi and Kotikalapudi Sriram
+Contact: lilia.hannachi@nist.gov, ksriram@nist.gov
+
+AS_SET ANALYSIS (OREGON 2019-10-03:00)
 The Routeviews OREGON collector peers with 43 ASes  
 
 *********************************************************************
